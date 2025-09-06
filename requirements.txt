@@ -2,4 +2,4 @@ flask
 pillow==10.0.1
 moviepy
 requests
-gunicorn
+gunicorn==23.0.0
