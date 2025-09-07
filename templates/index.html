@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Video Generator</title>
+</head>
+<body>
+    <h1>AI Video Generator</h1>
+    <form method="POST">
+        <textarea name="text" rows="4" cols="50" placeholder="Enter your text here"></textarea><br><br>
+        <button type="submit">Generate Video</button>
+    </form>
+
+    {% if video_file %}
+    <h2>Generated Video:</h2>
+    <video width="720" height="480" controls>
+        <source src="{{ url_for('static', filename=video_file) }}" type="video/mp4">
+    </video>
+    {% endif %}
+</body>
+</html>
+
